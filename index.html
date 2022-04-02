@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>LG92_Sodium_Tan start</title>
+
+    <meta charset="utf-8">
+    <meta name="author" content="Arabella Tan">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="revised" content="3-10-2022">
+  </head>
+
+  <body onload="main()">
+    
+    <script>
+      function main() {
+        // Triangle Sides
+        let a = prompt("Enter a value for side A");
+        let b = prompt("Enter a value for side B");
+        let c = prompt("Enter a value for side C");
+
+        // Function Declaration
+        function determineTriangle(a, b, c) {
+          if (a == b && a == c && b == c) {
+            alert("The triangle is EQUILATERAL");
+          }
+          else if (a == b || a == c || b == c) {
+            alert("The triangle is ISOSCELES");
+          }
+          else {
+            alert("The triangle is SCALENE");
+          }
+        }
+
+        // Output
+        if (isNaN(a) == true || isNaN(b) == true || isNaN(c) == true) {
+          alert("One or more of your inputs is not a number");
+        }
+        else {
+          determineTriangle(a, b, c);
+        }
+      }
+    </script>
+    
+  </body>
+</html>
